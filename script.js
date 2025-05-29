@@ -1,19 +1,13 @@
 //things we need for a war game
-/**   a deck with 52 cards
- * rank king, queen, jack and Ace ("name value")
- * suit (hearts, spades,clubs and diamonds)
- * how to shuffle cards (fisher-Yates shuffle googled and asked ai)
- * values
- * How to deal cards (for this part I also googled for help)
- * 
- * Players (class?)
- * name
- * score
- * hand
- * 
- * logic tp actually play the game
- * 
- */
+/**  1.Create and shuffle a deck.
+     2. Deal 26 cards to each player.
+     3.	Loop 26 times:
+        o	Each player plays one card.
+        o	Compare the card values.
+        o	Award 1 point to the player with the higher card.
+        o	Log the round: each card played, who won the round, and current score.
+     4.	After all rounds, display the final score.
+     5.	Declare the winner or if it's a tie. */
 
 //deck class
 /** should have:
@@ -59,6 +53,8 @@ class Deck {
       }
     }
   }
+  //how to shuffle cards (fisher-Yates shuffle googled and asked ai)
+
   shuffle() {
     
     for (let i = this.deck.length - 1; i > 0; i--) {
@@ -69,7 +65,7 @@ class Deck {
   
 }
 //class for the game
-// need a deck, shuffle deck and deal cards
+// need a deck, shuffle deck 
 // need 2players
 // hand, score , name*/
 
@@ -87,7 +83,6 @@ class Game {
     };
   }
 // how to play game
-// deal cards
 // take turns
 // as long as the player has cards
 // award point based on the card value
@@ -107,7 +102,7 @@ while (deck.deck.length !== 0){
 
 for (let i = 0; i < this.player1.hand.length; i++) {
 
-    //conditional logic to award points absed on comparing card values
+    //award points based on comparing card values
 
     if (this.player1.hand[i].value > this.player2.hand [i].value){
         this.player1.score ++
